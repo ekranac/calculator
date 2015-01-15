@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="calculatorDisplayNumSize">80sp</dimen>
+    <dimen name="calculatorOldDisplayNumSize">40sp</dimen>
+    <dimen name="calculatorKeyMargin">1dp</dimen>
+    <dimen name="calculatorKeyNumSize">30sp</dimen>
+</resources>

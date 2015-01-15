@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/calculator_keyboard"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/calculator_display_frame"
+        android:orientation="vertical"
+        android:weightSum="1.0">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:textSize="@dimen/calculatorOldDisplayNumSize"
+            android:id="@+id/display_old_content"
+            android:background="@color/white"
+            android:gravity="top|right"
+            android:layout_gravity="top|right"
+            android:layout_weight="0.10"
+            android:textColor="@color/darkcloud"
+            android:editable="false"/>
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:textSize="@dimen/calculatorDisplayNumSize"
+            android:id="@+id/display_content"
+            android:background="@color/white"
+            android:gravity="bottom|right"
+            android:editable="false"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/calculator_first_row"
+        android:layout_weight="0.167"
+        android:weightSum="1.0">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="fill_parent"
+            android:text="C"
+            android:layout_weight="0.75"
+            android:background="@drawable/transition_drawable_clear"
+            android:gravity="center"
+            android:id="@+id/calculator_clear"
+            android:textSize="@dimen/calculatorKeyNumSize"
+            android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:text="÷"
+            android:background="@drawable/transition_drawable_operator"
+            android:textColor="@color/white"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:id="@+id/calculator_divide"
+            android:textSize="@dimen/calculatorKeyNumSize"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/calculator_second_row"
+        android:layout_weight="0.167"
+        android:weightSum="1.0">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:text="7"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:id="@+id/calculator_seven"
+            android:textSize="@dimen/calculatorKeyNumSize"
+            android:textColor="@color/river"
+            android:background="@drawable/transition_drawable_num"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:text="8"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:id="@+id/calculator_eight"
+            android:textSize="@dimen/calculatorKeyNumSize"
+            android:textColor="@color/river"
+            android:background="@drawable/transition_drawable_num"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:text="9"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:id="@+id/calculator_nine"
+            android:textSize="@dimen/calculatorKeyNumSize"
+            android:textColor="@color/river"
+            android:background="@drawable/transition_drawable_num"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:text="×"
+            android:background="@drawable/transition_drawable_operator"
+            android:textColor="@color/white"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:id="@+id/calculator_multiply"
+            android:textSize="@dimen/calculatorKeyNumSize"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/calculator_third_row"
+        android:layout_below="@id/calculator_first_row"
+        android:layout_weight="0.167"
+        android:weightSum="1.0">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:text="4"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:id="@+id/calculator_four"
+            android:textSize="@dimen/calculatorKeyNumSize"
+            android:textColor="@color/river"
+            android:background="@drawable/transition_drawable_num"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:text="5"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:id="@+id/calculator_five"
+            android:textSize="@dimen/calculatorKeyNumSize"
+            android:textColor="@color/river"
+            android:background="@drawable/transition_drawable_num"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:text="6"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:id="@+id/calculator_six"
+            android:textSize="@dimen/calculatorKeyNumSize"
+            android:textColor="@color/river"
+            android:background="@drawable/transition_drawable_num"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:text="-"
+            android:background="@drawable/transition_drawable_operator"
+            android:textColor="@color/white"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:id="@+id/calculator_subtract"
+            android:textSize="@dimen/calculatorKeyNumSize"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/calculator_fourth_row"
+        android:layout_below="@id/calculator_second_row"
+        android:layout_weight="0.167"
+        android:weightSum="1.0">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:text="1"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:id="@+id/calculator_one"
+            android:textSize="@dimen/calculatorKeyNumSize"
+            android:textColor="@color/river"
+            android:background="@drawable/transition_drawable_num"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:text="2"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:id="@+id/calculator_two"
+            android:textSize="@dimen/calculatorKeyNumSize"
+            android:textColor="@color/river"
+            android:background="@drawable/transition_drawable_num"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:text="3"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:id="@+id/calculator_three"
+            android:textSize="@dimen/calculatorKeyNumSize"
+            android:textColor="@color/river"
+            android:background="@drawable/transition_drawable_num"/>
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:text="+"
+            android:background="@drawable/transition_drawable_operator"
+            android:textColor="@color/white"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:id="@+id/calculator_add"
+            android:textSize="@dimen/calculatorKeyNumSize"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/calculator_fifth_row"
+        android:layout_below="@id/calculator_second_row"
+        android:layout_weight="0.167"
+        android:weightSum="1.0">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="fill_parent"
+            android:text="0"
+            android:layout_weight="0.50"
+            android:gravity="center"
+            android:id="@+id/calculator_zero"
+            android:textSize="@dimen/calculatorKeyNumSize"
+            android:textColor="@color/river"
+            android:background="@drawable/transition_drawable_num"
+            />
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:text=","
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:id="@+id/calculator_point"
+            android:textSize="@dimen/calculatorKeyNumSize"
+            android:textColor="@color/river"
+            android:background="@drawable/transition_drawable_num"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:text="="
+            android:background="@drawable/transition_drawable_operator"
+            android:textColor="@color/white"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:id="@+id/calculator_equals"
+            android:textSize="@dimen/calculatorKeyNumSize"/>
+
+    </LinearLayout>
+
+</LinearLayout>
