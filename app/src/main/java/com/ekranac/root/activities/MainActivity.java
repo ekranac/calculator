@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Scroller;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.ekranac.root.calculator.R;
 
@@ -134,6 +135,7 @@ public class MainActivity extends Activity implements View.OnTouchListener {
 
                 equ.add(op);
                 oldCalcDisplay.setText(oldCalcDisplay.getText().toString() + op);
+                oldCalcDisplay.setSelection(oldCalcDisplay.length()-1);
             }
             else if(oldCalcDisplay.getText().toString()=="")
             {
@@ -144,6 +146,7 @@ public class MainActivity extends Activity implements View.OnTouchListener {
                 equ.add(op);
 
                 oldCalcDisplay.setText(oldCalcDisplay.getText().toString() + calcDisplay.getText().toString() + op);
+                oldCalcDisplay.setSelection(oldCalcDisplay.length()-1);
                 calcDisplay.setText("0");
             }
             hasPoint=false;
@@ -156,10 +159,6 @@ public class MainActivity extends Activity implements View.OnTouchListener {
             Vibrator vibe = (Vibrator) getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
             vibe.vibrate(20);
         }
-
-
-
-
 
     }
 
@@ -232,6 +231,8 @@ public class MainActivity extends Activity implements View.OnTouchListener {
 
                         hasPoint=true;
                     }
+
+                    oldCalcDisplay.setSelection(oldCalcDisplay.length()-1);
                 }
 
                 else if(event.getAction() == MotionEvent.ACTION_UP)
@@ -307,7 +308,8 @@ public class MainActivity extends Activity implements View.OnTouchListener {
 
                     catch (EvalError error)
                     {
-                        Log.i("EvalError", error.toString());
+                        Log.e("EvalError", error.toString());
+                        Toast.makeText(getApplicationContext(), "Number too big, sorry :)", Toast.LENGTH_SHORT).show();
                     }
                 }
 

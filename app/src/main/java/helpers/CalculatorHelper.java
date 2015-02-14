@@ -42,6 +42,7 @@ public class CalculatorHelper {
 
                 calcDisplay.setText(calcDisplay.getText().toString() + Integer.toString(num));
                 equ.add(Integer.toString(num));
+                calcDisplay.setSelection(calcDisplay.length()-1);
 
             }
 
@@ -54,6 +55,7 @@ public class CalculatorHelper {
                 else
                 {
                     calcDisplay.setText(calcDisplay.getText().toString() + Integer.toString(num));
+                    calcDisplay.setSelection(calcDisplay.length()-1);
                     equ.add(Integer.toString(num));
 
                 }
