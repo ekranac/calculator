@@ -232,7 +232,10 @@ public class MainActivity extends Activity implements View.OnTouchListener {
                         hasPoint=true;
                     }
 
-                    oldCalcDisplay.setSelection(oldCalcDisplay.length()-1);
+                    if(oldCalcDisplay.length()!=0)
+                    {
+                        oldCalcDisplay.setSelection(oldCalcDisplay.length()-1);
+                    }
                 }
 
                 else if(event.getAction() == MotionEvent.ACTION_UP)
